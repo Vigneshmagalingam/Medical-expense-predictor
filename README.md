@@ -1,6 +1,3 @@
-Absolutely, here's an updated version of the README file with added emojis and visual elements:
-
----
 
 # 🏥 Medical Expenses Prediction Project
 

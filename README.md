@@ -1,7 +1,7 @@
 
 # 🏥 Medical Expenses Prediction Project
 
-![Medical Expenses Prediction](https://yourimageurl.com)
+![Medical Expenses Prediction]([https://yourimageurl.com](https://media.istockphoto.com/id/1181024482/photo/medical-finance-insurance.jpg?s=1024x1024&w=is&k=20&c=3j0zWCwpcaw95gXY624zxG8uN-nZ2D1jh0ElHO1XQ0o=))
 
 ## Overview
 

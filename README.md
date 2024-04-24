@@ -62,4 +62,4 @@ The trained regression model will be deployed as a mobile or web application to 
 
 ---
 
-Feel free to further customize and enhance the README to suit your preferences and make it visually pleasing!
+

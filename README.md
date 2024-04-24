@@ -1,8 +1,6 @@
 
 # 🏥 Medical Expenses Prediction Project
 
-![Medical Expenses Prediction](https://www.istockphoto.com/photo/medical-finance-insurance-gm1181024482-331083376)
-
 ## Overview
 
 This project aims to predict the medical expenses for patients based on their health conditions using regression techniques. The dataset used for this project is `hospital_data.xlsx`, and the target variable for prediction is the total cost to the hospital.

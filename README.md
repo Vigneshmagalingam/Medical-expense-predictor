@@ -56,6 +56,9 @@ The trained regression model will be deployed as a mobile or web application to 
 
 - Vignesh.M (vigneshmagalingamwork@gmail.com) 💼
 
+- Sandhya.V.S
+(sandhyasridharan20@gmail.com) 👜
+
 ---
 
 

@@ -4,6 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
 
 # Load the dataset
 df = pd.read_csv("C:\\Users\\vigne\\Downloads\\hospital_data.csv")
@@ -32,8 +33,11 @@ df.replace(binary_mapping, inplace=True)
 X = df.drop('TOTAL COST TO HOSPITAL ', axis=1)
 y = df['TOTAL COST TO HOSPITAL ']
 
-model = LinearRegression()
-model.fit(X, y)
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+model = RandomForestRegressor(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
 
 # Define a function for user inputs and prediction
 def user_input_features():
@@ -77,16 +81,28 @@ def user_input_features():
 input_df = user_input_features()
 y_pred = model.predict(input_df)
 
-# Display the prediction
+# Calculate SSR, MSE, and R2 on the test set
+y_test_pred = model.predict(X_test)
+SSR = ((y_test_pred - y_test) ** 2).sum()
+MSE = mean_squared_error(y_test, y_test_pred)
+R2 = r2_score(y_test, y_test_pred)
+
+# Display the prediction and evaluation metrics
 st.subheader('Predicted Total Cost to Hospital:')
 st.write(f"${y_pred[0]:,.2f}")
 
-# Plotting code if needed
+st.subheader('Evaluation Metrics on Test Set:')
+st.write(f"Sum Squared Regression (SSR): {SSR:.2f}")
+st.write(f"Mean Squared Error (MSE): {MSE:.2f}")
+st.write(f"R2 Score: {R2:.2f}")
+
+# Plot SSR
 st.subheader('Sum Squared Regression (SSR) Plot:')
 plt.figure(figsize=(8, 6))
-plt.plot(input_df, y_pred, 'o')
+plt.plot(y_test, y_test_pred, 'o')
 plt.xlabel('Actual Total Cost to Hospital')
 plt.ylabel('Predicted Total Cost to Hospital')
+plt.title('Sum Squared Regression (SSR) Plot')
 plt.grid(True)
 st.pyplot()
 

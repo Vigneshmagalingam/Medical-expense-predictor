@@ -32,10 +32,9 @@ The trained regression model will be deployed as a mobile or web application to 
 
 ## Files Included
 
-- `hospital_data.xlsx`: Dataset containing patient and medical expense information.
-- `Regression_Model.ipynb`: Jupyter Notebook containing the regression model development and evaluation code.
+- `hospital_data.csv`: Dataset containing patient and medical expense information.
 - `app.py` (for web application deployment): Python script for deploying the regression model as a web application.
-- `mobile_app.py` (for mobile application deployment): Python script for deploying the regression model as a mobile application.
+- `app.py` (for mobile application deployment): Python script for deploying the regression model as a mobile application.
 - `requirements.txt`: List of dependencies required to run the application.
 
 ## Usage

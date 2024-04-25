@@ -21,8 +21,7 @@ Any regression technique can be used for prediction, such as Linear Regression, 
 
 After training the regression model, the following performance measures will be plotted and evaluated:
 - Sum Squared Regression (SSR)
-- Mean Squared Error (MSE)
-- R2 value
+
 
 These metrics will provide insights into the accuracy and effectiveness of the regression model in predicting medical expenses.
 
